@@ -10,7 +10,7 @@ int print_last_digit(int n)
 {
 if (n == INT_MIN)
 {
-putchar('8');
+_putchar('8');
 return 8;
 }
 if (n < 0)
