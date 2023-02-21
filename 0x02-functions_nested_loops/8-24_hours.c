@@ -3,7 +3,7 @@
 void print_time(int hours, int min);
 
 /**
- * jack_basuer -  function that prints every minute of the day
+ * jack_bauer -  function that prints every minute of the day
  * of Jack Bauer, starting from 00:00 to 23:59
  *
  * Description: This is a function that prints time.
@@ -24,6 +24,15 @@ print_time(i, j);
 }
 
 
+
+/**
+ * print_time - function prints time format
+ * @hours: time hours
+ * @min: time minutes
+ *
+ * Description: util function.
+ * Returns: void
+*/
 void print_time(int hours, int min)
 {
 if (hours < 10)
