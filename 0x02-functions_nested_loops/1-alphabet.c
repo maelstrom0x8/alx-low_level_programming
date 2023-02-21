@@ -8,8 +8,8 @@
 void print_alphabet(void)
 {
 int i;
-char m[28] = "abcdefghijklmnopqrstuvwxyz\n";
-for (i = 0; i < 28; ++i)
+char m[27] = "abcdefghijklmnopqrstuvwxyz\n";
+for (i = 0; i < 27; ++i)
 {
 _putchar(m[i]);
 }
