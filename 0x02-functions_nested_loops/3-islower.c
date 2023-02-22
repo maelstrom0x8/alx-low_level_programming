@@ -9,5 +9,12 @@
  */
 int _islower(int c)
 {
-return (islower(c) == 1 ? 1 : 0);
+int _islower(int c)
+{
+if (islower(c))
+{
+return (1);
+}
+return (0);
+}
 }
