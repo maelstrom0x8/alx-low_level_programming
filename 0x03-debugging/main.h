@@ -9,6 +9,5 @@ int largest_number(int a, int b, int c);
 
 void print_remaining_days(int month, day, year);
 
-int is_leapyear(int year);
 
 #endif /* MAIN_H */

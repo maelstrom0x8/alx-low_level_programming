@@ -2,18 +2,6 @@
 #include "main.h"
 
 /**
- * is_leapyear - takes a year and returns 1 if it is a leap year
- * or 0 if otherwise
- * @year: year
- * Return: int
- */
-
-int is_leapyear(int year)
-{
-	return (year % 4 == 0 || !(year % 100 == 0) && year % 400 == 0);
-}
-
-/**
 * print_remaining_days - takes a date and prints how many days are
 * left in the year, taking leap years into account
 * @month: month in number format
@@ -27,7 +15,7 @@ void print_remaining_days(int month, int day, int year)
 	int _day, rem;
 
 	_day = convert_day(month, day);
-	if (is_leapyear(year))
+	if (year % 4 == 0 || !(year % 100 == 0) && year % 400 == 0)
 	{
 	if (month >= 2 && day >= 60)
 	{
