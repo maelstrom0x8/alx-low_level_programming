@@ -4,10 +4,10 @@
  * print_number - Function printing an integer
  * Description: Prints an integer
  * @number: Number to print
- * Return: int
+ * Return: void
  */
 
-vioid print_number(int number)
+void print_number(int number)
 {
 	unsigned int i;
 
