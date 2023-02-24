@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * main - Entry point to FizzBuzz program
+ *
+ * Return: Always 0.
+ */
+
+
 int main(void) {
 for (int i = 1; i <= 100; i++)
 {
@@ -18,5 +25,5 @@ printf("%d ", i);
 }
 }
 printf("\n");
-return 0;
+return (0);
 }
