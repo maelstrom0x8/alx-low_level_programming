@@ -4,11 +4,11 @@
 
 /**
  * rev_string - A function that reverses a string.
- * @s: The string
+ * @str: The string
  *
  * Return: void.
  */
-void rev_string(char *s)
+void rev_string(char *str)
 {
 	int len, i, j;
 
