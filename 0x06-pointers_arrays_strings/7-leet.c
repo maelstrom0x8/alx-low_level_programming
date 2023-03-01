@@ -9,14 +9,16 @@
 
 char *leet(char *str)
 {
+	int i, j;
+
 	char *result = str;
 
 	char *s1 = "AaEeOoTtLl";
 	char *s2 = "4433007711";
 
-	for (int i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (int j = 0; s1[j] != '\0'; j++)
+		for (j = 0; s1[j] != '\0'; j++)
 		{
 			if (str[i] == s1[j])
 			{
