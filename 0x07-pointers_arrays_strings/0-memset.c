@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - This function copies the value of b (converted to
+ * *_memset - This function copies the value of b (converted to
  * an unsigned char) into each of the first size bytes of the
  * object beginning at s. It returns the value of s.
  * Description:  Fills memory with a constant byte
