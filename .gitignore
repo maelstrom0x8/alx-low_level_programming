@@ -15,3 +15,4 @@ _deps
 .vscode
 CMakeLists.txt
 main.c
+check.sh
