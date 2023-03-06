@@ -9,21 +9,22 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-char *res;
-char *ax;
+	char *res;
+	char *ax;
 
-for (res = s; *res != '\0'; ++res)
-{
-char beg = *res;
+	for (res = s; *res != '\0'; ++res)
+	{
+		char beg = *res;
 
-for (ax = accept; *ax != '\0'; ++ax)
-{
-if (*ax == beg)
-{
-return (res);
-}
-}
+		for (ax = accept; *ax != '\0'; ++ax)
+		{
+			if (*ax == beg)
+			{
+				return (res);
+			}
+		}
+	}
+
+	return (NULL);
 }
 
-return (NULL);
-}

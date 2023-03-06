@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
 
 /**
  * str_cmp - A function that compares two strings.
@@ -12,28 +11,28 @@
 
 int str_cmp(const char *s1, const char *s2)
 {
-while (*s1 != '\0' && *s2 != '\0')
-{
-if (*s1 != *s2)
-{
-return (*s1 - *s2);
-}
-s1++;
-s2++;
-}
+	while (*s1 != '\0' && *s2 != '\0')
+	{
+		if (*s1 != *s2)
+		{
+			return (*s1 - *s2);
+		}
+		s1++;
+		s2++;
+	}
 
-if (*s1 == '\0' && *s2 == '\0')
-{
-return (0);
-}
-else if (*s1 == '\0')
-{
-return (-(*s2));
-}
-else
-{
-return (*s1);
-}
+	if (*s1 == '\0' && *s2 == '\0')
+	{
+		return (0);
+	}
+	else if (*s1 == '\0')
+	{
+		return (-(*s2));
+	}
+	else
+	{
+		return (*s1);
+	}
 }
 
 /**
@@ -48,18 +47,19 @@ return (*s1);
 
 char *_strstr(char *haystack, char *needle)
 {
-char *start;
-char *point;
+	char *start;
+	char *point;
 
-start = haystack;
-point = needle;
+	start = haystack;
+	point = needle;
 
-while (*start != '\0')
-{
-if (str_cmp(start, point) == 0)
-return (start);
-++start;
+	while (*start != '\0')
+	{
+		if (str_cmp(start, point) == 0)
+			return (start);
+		++start;
+	}
+
+	return (NULL);
 }
 
-return (NULL);
-}
