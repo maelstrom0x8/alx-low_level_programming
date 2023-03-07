@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * str_cmp - A function that compares two strings.
@@ -35,6 +34,8 @@ int str_cmp(const char *s1, const char *s2)
 	}
 }
 
+
+
 /**
  * _strstr - A function that locates a substring.
  * @haystack: String to be searched
@@ -53,6 +54,11 @@ char *_strstr(char *haystack, char *needle)
 	start = haystack;
 	point = needle;
 
+	if(*needle == '\0')
+	{
+		return (haystack);
+	}
+
 	while (*start != '\0')
 	{
 		if (str_cmp(start, point) == 0)
@@ -60,6 +66,6 @@ char *_strstr(char *haystack, char *needle)
 		++start;
 	}
 
-	return (NULL);
+	return ('\0');
 }
 
