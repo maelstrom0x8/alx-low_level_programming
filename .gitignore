@@ -16,3 +16,5 @@ _deps
 CMakeLists.txt
 main.c
 check.sh
+main
+run.sh
