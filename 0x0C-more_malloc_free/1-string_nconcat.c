@@ -1,29 +1,5 @@
 #include <stdlib.h>
 #include "main.h"
-#include <stdio.h>
-
-/**
- * _strlen - String length
- * Description: Returns the length of a string
- * @str: String
- * Return: int
- */
-
-int _strlen(char *str)
-{	int len;
-
-	if (str == NULL)
-	{
-		return (0);
-	}
-	len = 0;
-	while (*str != '\0')
-	{
-		++len;
-		++str;
-	}
-	return (len);
-}
 
 /**
  * string_nconcat - String concatenation
@@ -38,7 +14,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j, l1, l2;
 	char *str;
-	
+
 	l1 = 0;
 	while (s1[l1] != '\0')
 	{
