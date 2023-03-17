@@ -43,9 +43,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	l1 = _strlen(s1);
-	l2 = _strlen(s2);
-	lim = (n >= l2) ? l2 : n;
+	l1 = s1 ? _strlen(s1) : 0;
+	l2 = s2 ? _strlen(s2) : 0;
+	lim = (n > l2) ? l2 : n;
 	total = l1 + lim;
 	str = malloc(total + 1);
 	if (str == NULL)
