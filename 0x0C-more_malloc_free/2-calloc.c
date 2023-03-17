@@ -13,6 +13,7 @@ void *_calloc(unsigned int nmeb, unsigned int size)
 {
 	void *ptr;
 	unsigned int i, total;
+	unsigned char *xps;
 
 	if (size == 0 || nmeb == 0)
 	{
@@ -24,7 +25,7 @@ void *_calloc(unsigned int nmeb, unsigned int size)
 	{
 		return (NULL);
 	}
-	unsigned char *xps = (unsigned char *)ptr;
+	xps = (unsigned char *)ptr;
 
 	for (i = 0; i < total; i++)
 	{
