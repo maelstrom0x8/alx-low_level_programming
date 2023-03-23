@@ -5,8 +5,9 @@
 
 
 /**
- * main - entrypoint
- * Description: Entrypoint for the program
+ * main - Entrypoint
+ * Description: Program that runs basic arithemetic
+ * operations
  * @argc: Number of command-line arguments
  * @argv: Array of all arguments
  * Return: Always 0.
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 	char *opcodes = "+-*/%";
 	int (*f_ptr)(int, int);
 
-	if (argc < 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
