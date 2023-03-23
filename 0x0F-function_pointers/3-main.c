@@ -1,4 +1,3 @@
-#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "3-calc.h"
@@ -35,7 +34,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((strcmp(op, "/") == 0 || strcmp(op, "%") == 0) && b == 0)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
