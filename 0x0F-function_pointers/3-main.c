@@ -17,8 +17,6 @@ int main(int argc, char *argv[])
 {
 	int a, b, result;
 	char *op;
-	char *opcodes = "+-*/%";
-	int (*f_ptr)(int, int);
 
 	if (argc != 4)
 	{
@@ -31,7 +29,7 @@ int main(int argc, char *argv[])
 
 	op = argv[2];
 
-	if (memchr(opcodes, op[0], 5) == NULL)
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
@@ -43,9 +41,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	f_ptr = get_op_func(op);
-
-	result = (*f_ptr)(a, b);
+	result = get_op_func(op)(a, b);
 	printf("%d\n", result);
 
 	return (0);
