@@ -8,7 +8,7 @@
  * Return: 0 if the machine is big-endian, or 1 if the machine is little-endian
  */
 
-int get_endianness()
+int get_endianness(void)
 {
 	int x;
 	char *p;
