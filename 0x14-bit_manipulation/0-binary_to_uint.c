@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "main.h"
 
 
 
@@ -68,7 +68,7 @@ int ipow(int a, int n)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int n, sum;
-	int i, k;
+	unsigned int i, k;
 
 	n = _strlen(b);
 	k = n - 1;
@@ -79,7 +79,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		return (0);
 	}
-	while (i < n && k >= 0)
+	while (i < n)
 	{
 		if (b[i] == '0' || b[i] == '1')
 		{
