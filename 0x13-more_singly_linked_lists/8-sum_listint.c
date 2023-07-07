@@ -3,7 +3,11 @@
 #include <stdlib.h>
 #include "lists.h"
 
-
+/**
+ * sum_listint - Sum the elements in a list
+ * @head: Head
+ * Return: int
+*/
 
 int sum_listint(listint_t *head)
 {

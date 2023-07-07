@@ -3,7 +3,12 @@
 #include <stdlib.h>
 #include "lists.h"
 
-
+/**
+ * get_nodeint_at_index - Get node at index
+ * @head: Head
+ * @index: Node index
+ * Return: Pointer to list
+*/
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {

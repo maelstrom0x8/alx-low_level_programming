@@ -3,7 +3,10 @@
 #include <stdlib.h>
 #include "lists.h"
 
-
+/**
+ * free_listint - Free a linked list
+ * @head: Head
+*/
 
 void free_listint(listint_t *head)
 {

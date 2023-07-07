@@ -4,6 +4,12 @@
 #include "lists.h"
 
 
+/**
+* add_nodeint - Add a new node at the beginning of a list
+* @head: List head
+* @n: value
+* Return: Pointer to list
+*/
 
 listint_t *add_nodeint(listint_t **head, const int n)
 {

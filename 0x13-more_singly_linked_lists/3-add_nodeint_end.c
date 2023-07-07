@@ -3,7 +3,12 @@
 #include <string.h>
 #include "lists.h"
 
-
+/**
+* add_nodeint_end - Add a new node at the end of a list
+* @head: List head
+* @n: value
+* Return: Pointer to list
+*/
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
