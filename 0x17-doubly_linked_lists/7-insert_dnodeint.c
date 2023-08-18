@@ -33,7 +33,7 @@ int make_node(dlistint_t **node, int n)
 
 
 /**
- * dlistint_length - Counts the number of nodes in a doubly linked list
+ * dlistint_size - Counts the number of nodes in a doubly linked list
  * @h: Pointer to the head node of the doubly linked list.
  * Return: The number of nodes in the list.
  */
