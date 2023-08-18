@@ -31,7 +31,6 @@ int make_node(dlistint_t **node, int n)
 	return (0);
 }
 
-
 /**
  * dlistint_size - Counts the number of nodes in a doubly linked list
  * @h: Pointer to the head node of the doubly linked list.
@@ -80,25 +79,28 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (i < idx || make_node(&node, n) != 0)
 		return (NULL);
 
-	if (idx == 0)
+	if (idx == 0 || *h == NULL)
 	{
 		node->next = *h;
 		if (*h != NULL)
-		{
 			(*h)->prev = node;
-		}
 		*h = node;
+	}
+	else if (current == NULL)
+	{
+		dlistint_t *last = *h;
+
+		while (last->next != NULL)
+			last = last->next;
+		last->next = node;
+		node->prev = last;
 	}
 	else
 	{
 		node->next = current;
 		node->prev = current->prev;
-		if (current->prev != NULL)
-		{
-			current->prev->next = node;
-		}
+		current->prev->next = node;
 		current->prev = node;
 	}
-
 	return (node);
 }
