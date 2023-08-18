@@ -31,6 +31,26 @@ int make_node(dlistint_t **node, int n)
 	return (0);
 }
 
+
+/**
+ * dlistint_length - Counts the number of nodes in a doubly linked list
+ * @h: Pointer to the head node of the doubly linked list.
+ * Return: The number of nodes in the list.
+ */
+size_t dlistint_size(const dlistint_t *h)
+{
+	const dlistint_t *node = h;
+	size_t sum = 0;
+
+	while (node != NULL)
+	{
+		sum++;
+		node = node->next;
+	}
+
+	return (sum);
+}
+
 /**
  * insert_dnodeint_at_index - Inserts a new node at a specific
  * index in a doubly linked list.
@@ -47,8 +67,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int i = 0;
 	dlistint_t *current = NULL;
 	dlistint_t *node = NULL;
+	size_t count = dlistint_size(*h);
 
-	if (*h == NULL)
+	if (*h == NULL || idx > count)
 		return (NULL);
 	current = *h;
 	while (i < idx && current != NULL)
