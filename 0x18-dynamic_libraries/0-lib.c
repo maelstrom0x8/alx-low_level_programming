@@ -2,7 +2,6 @@
 
 #include "main.h"
 
-
 /**
  * _putchar - Writes a character
  * @c: Character
@@ -14,7 +13,6 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
-
 /**
  * _islower - islower
  * @c: input
@@ -24,11 +22,14 @@ int _putchar(char c)
  */
 int _islower(int c)
 {
-    if (c >= 'a' && c <= 'z') {
-        return (1);
-    } else {
-        return (0);
-    }
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
 /**
@@ -40,11 +41,14 @@ int _islower(int c)
  */
 int _isalpha(int c)
 {
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-        return (1);
-    } else {
-        return (0);
-    }
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
 /**
