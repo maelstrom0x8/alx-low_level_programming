@@ -18,3 +18,6 @@ main.c
 check.sh
 main
 run.sh
+100-operations.o
+100-operations.c
+100-test.py
