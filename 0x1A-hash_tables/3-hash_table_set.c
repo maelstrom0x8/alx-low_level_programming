@@ -40,7 +40,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node;
 	unsigned long int slot;
 
-	if (ht == NULL || strlen(key) < 1 || strlen(value) < 1 || *key == '\0' || key == NULL || value == NULL)
+	if (ht == NULL || strlen(key) < 1 || strlen(value) < 1
+		|| *key == '\0' || key == NULL || value == NULL)
 	{
 		return (0);
 	}
