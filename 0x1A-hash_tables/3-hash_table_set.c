@@ -38,7 +38,9 @@ hash_node_t *search_existing_key(hash_node_t *head, const char *key)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node;
+	hash_node_t *existing;
 	unsigned long int slot;
+	char *val;
 
 	if (ht == NULL || strlen(key) < 1 || strlen(value) < 1
 		|| *key == '\0' || key == NULL || value == NULL)
@@ -46,35 +48,32 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 
+	val = strdup(value);
+	slot = key_index((const unsigned char *)key, ht->size);
+	existing = search_existing_key(ht->array[slot], key);
+
+	if (existing != NULL)
+	{
+		free(existing->value);
+		existing->value = val;
+		return (1);
+	}
+
 	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
+	{
+		free(val);
 		return (0);
-
-	node->value = strdup(value);
+	}
 	node->key = strdup(key);
-
-	slot = key_index((const unsigned char *)key, ht->size);
-
-	if (ht->array[slot] == NULL)
+	if (node->key == NULL)
 	{
-		ht->array[slot] = node;
+		free(node);
+		return (1);
 	}
-	else
-	{
-		hash_node_t *existing = search_existing_key(ht->array[slot], key);
-
-		if (existing != NULL)
-		{
-			free(existing->value);
-			free(node->key);
-			existing->value = node->value;
-		}
-		else
-		{
-			node->next = ht->array[slot];
-			ht->array[slot] = node;
-		}
-	}
+	node->value = val;
+	node->next = ht->array[slot];
+	ht->array[slot] = node;
 
 	return (1);
 }

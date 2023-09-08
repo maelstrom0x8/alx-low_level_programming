@@ -9,8 +9,8 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	int printed;
-	unsigned long i;
+	int printed = -1;
+	unsigned long i = 0;
 
 	if (ht == NULL)
 	{
