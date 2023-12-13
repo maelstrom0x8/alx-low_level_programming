@@ -17,10 +17,10 @@ void print_array(int *array, int a, int b)
 		return;
 
 	printf("Searching in array: ");
-	for (i = a; i < b+1; ++i)
+	for (i = a; i < b + 1; ++i)
 	{
 		printf("%d", array[i]);
-		if (i != b )
+		if (i != b)
 			printf(", ");
 	}
 	printf("\n");
