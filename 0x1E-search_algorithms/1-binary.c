@@ -11,16 +11,16 @@
 */
 void print_array(int *array, int a, int b)
 {
-    int size = b - a;
-    int i;
+	int size = b - a;
+	int i;
 
-    if (size <= 0)
-        return;
+	if (size <= 0)
+		return;
 
-    printf("Searching in array: ");
-    for (i = a; i < b; ++i)
-        printf("%d ", array[i]);
-    printf("\n");
+	printf("Searching in array: ");
+	for (i = a; i < b; ++i)
+		printf("%d ", array[i]);
+	printf("\n");
 }
 
 
@@ -36,19 +36,20 @@ void print_array(int *array, int a, int b)
 */
 int bs_helper(int *array, size_t begin, size_t end, int value)
 {
-    size_t mid = (size_t)((end + begin) / 2);
-    print_array(array, begin, end);
-    if (value == array[mid])
-        return (mid);
+	size_t mid = (size_t)((end + begin) / 2);
 
-    if (begin == end)
-        return (-1);
-    else if (value > array[mid])
-        return (bs_helper(array, mid + 1, end, value));
-    else if (value < array[mid])
-        return (bs_helper(array, begin, mid - 1, value));
-    else
-        return (-1);
+	print_array(array, begin, end);
+	if (value == array[mid])
+		return (mid);
+
+	if (begin == end)
+		return (-1);
+	else if (value > array[mid])
+		return (bs_helper(array, mid + 1, end, value));
+	else if (value < array[mid])
+		return (bs_helper(array, begin, mid - 1, value));
+	else
+		return (-1);
 }
 
 
@@ -64,14 +65,14 @@ int bs_helper(int *array, size_t begin, size_t end, int value)
 */
 int binary_search(int *array, size_t size, int value)
 {
-    size_t begin;
-    size_t end;
+	size_t begin;
+	size_t end;
 
-    if (array == NULL)
-        return (-1);
+	if (array == NULL)
+		return (-1);
 
-    begin = 0;
-    end = size - 1;
+	begin = 0;
+	end = size - 1;
 
-    return (bs_helper(array, begin, end, value));
+	return (bs_helper(array, begin, end, value));
 }
